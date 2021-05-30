@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dto\Module.Dto\Module.Dto.csproj" />
+    <ProjectReference Include="..\..\Utils\Module.Utils\Module.Utils.csproj" />
+    <ProjectReference Include="..\Module.IoC.Register.Interfaces\Module.IoC.Register.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Factory\Module.Factory\Module.Factory.csproj" />
+    <ProjectReference Include="..\..\Factory\Module.Factory.Interface\Module.Factory.Interface.csproj" />
+    <ProjectReference Include="..\..\Repository\Module.Repository\Module.Repository.csproj" />
+    <ProjectReference Include="..\..\Repository\Module.Repository.Entity\Module.Repository.Entity.csproj" />
+    <ProjectReference Include="..\..\Repository\Module.Repository.Interface\Module.Repository.Interface.csproj" />
+    <ProjectReference Include="..\..\Repository\Command\Module.Repository.Command\Module.Repository.Command.csproj" />
+    <ProjectReference Include="..\..\Repository\Command\Module.Repository.Command.Interface\Module.Repository.Command.Interface.csproj" />
+    <ProjectReference Include="..\..\Repository\Query\Module.Repository.Query\Module.Repository.Query.csproj" />
+    <ProjectReference Include="..\..\Repository\Query\Module.Repository.Query.Interface\Module.Repository.Query.Interface.csproj" />
+    <ProjectReference Include="..\..\ServiceValidation\Module.Service.Validation\Module.Service.Validation.csproj" />
+    <ProjectReference Include="..\..\ServiceValidation\Module.Service.Validation.Interface\Module.Service.Validation.Interface.csproj" />
+    <ProjectReference Include="..\..\Service\Module.Service\Module.Service.csproj" />
+    <ProjectReference Include="..\..\Service\Module.Service.Interface\Module.Service.Interface.csproj" />
+    <ProjectReference Include="..\..\Integration\Module.Integration\Module.Integration.csproj" />
+    <ProjectReference Include="..\..\Integration\Module.Integration.Interface\Module.Integration.Interface.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.0" />
+    <PackageReference Include="Autofac.Extras.Moq" Version="6.0.0" />
+    <PackageReference Include="Automapper" Version="10.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

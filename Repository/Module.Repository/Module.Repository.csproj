@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Command\Module.Repository.Command.Interface\Module.Repository.Command.Interface.csproj" />
+    <ProjectReference Include="..\Query\Module.Repository.Query.Interface\Module.Repository.Query.Interface.csproj" />
+    <ProjectReference Include="..\Module.Repository.Entity\Module.Repository.Entity.csproj" />
+    <ProjectReference Include="..\..\Dto\Module.Dto\Module.Dto.csproj" />
+    <ProjectReference Include="..\Module.Repository.Interface\Module.Repository.Interface.csproj" />
+    <ProjectReference Include="..\..\Factory\Module.Factory.Interface\Module.Factory.Interface.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

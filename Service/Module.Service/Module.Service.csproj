@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Repository\Module.Repository.Entity\Module.Repository.Entity.csproj" />
+    <ProjectReference Include="..\..\Dto\Module.Dto\Module.Dto.csproj" />
+    <ProjectReference Include="..\..\Repository\Module.Repository.Interface\Module.Repository.Interface.csproj" />
+    <ProjectReference Include="..\..\ServiceValidation\Module.Service.Validation.Interface\Module.Service.Validation.Interface.csproj" />
+    <ProjectReference Include="..\..\Utils\Module.Utils\Module.Utils.csproj" />
+    <ProjectReference Include="..\Module.Service.Interface\Module.Service.Interface.csproj" />
+    <ProjectReference Include="..\..\Factory\Module.Factory.Interface\Module.Factory.Interface.csproj" />
+    <ProjectReference Include="..\..\Integration\Module.Integration.Interface\Module.Integration.Interface.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

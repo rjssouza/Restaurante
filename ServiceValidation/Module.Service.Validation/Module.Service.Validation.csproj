@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dto\Module.Dto\Module.Dto.csproj" />
+    <ProjectReference Include="..\..\Repository\Module.Repository.Entity\Module.Repository.Entity.csproj" />
+    <ProjectReference Include="..\..\Service\Module.Service.Interface\Module.Service.Interface.csproj" />
+    <ProjectReference Include="..\..\Utils\Module.Utils\Module.Utils.csproj" />
+    <ProjectReference Include="..\Module.Service.Validation.Interface\Module.Service.Validation.Interface.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
