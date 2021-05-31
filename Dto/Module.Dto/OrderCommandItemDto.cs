@@ -24,11 +24,6 @@ namespace Module.Dto
         public Guid OrderCommandId { get; set; }
 
         /// <summary>
-        /// Quantidade
-        /// </summary>
-        public int Quantity { get; set; }
-
-        /// <summary>
         /// Item do menu do restaurante
         /// </summary>
         public Guid RestaurantMenuItemId { get; set; }
