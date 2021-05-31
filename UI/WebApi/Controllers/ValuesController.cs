@@ -1,6 +1,8 @@
 ﻿using Base;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Module.Dto;
+using Module.Service.Interface;
 
 namespace WebApi.Controllers
 {
@@ -9,9 +11,14 @@ namespace WebApi.Controllers
     [AllowAnonymous]
     public class ValuesController : ServiceController
     {
+        public IMenuService MenuService { get; set; }
+        
+        [ProducesResponseType(200, Type = typeof(ClientMenuViewDto))]
         public IActionResult Get()
         {
-            return Ok("Ok");
+            var clientMenuView = this.MenuService.GetMenuView();
+            
+            return Ok(clientMenuView);
         }
     }
 }

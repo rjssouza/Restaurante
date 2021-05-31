@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using Module.Dto;
-using Module.Dto.Base;
 using Module.Factory.Interface.Mapper;
 using Module.IoC.Register.Interfaces;
+using Module.Repository.Entity;
+using Module.Repository.Entity.Base;
 using System;
 
 namespace Module.IoC.Mapper
@@ -52,8 +53,26 @@ namespace Module.IoC.Mapper
         private void ConfigureMapper(IMapperConfigurationExpression mapperConfigExpression)
         {
             ///Conversor global para seleção generica usando construtor generico
-            mapperConfigExpression.CreateMap<BaseDto<Guid>, GenericSelectDto<Guid>>()
+            mapperConfigExpression.CreateMap<BaseEntity<Guid>, GenericSelectDto<Guid>>()
                 .ForMember(src => src.Text, dest => dest.MapFrom(t => t.ToString()));
+
+            mapperConfigExpression.CreateMap<ClientTableEntity, ClientTableDto>();
+            mapperConfigExpression.CreateMap<ClientTableDto, ClientTableEntity>();
+
+            mapperConfigExpression.CreateMap<OrderCommandEntity, OrderCommandDto>();
+            mapperConfigExpression.CreateMap<OrderCommandDto, OrderCommandEntity>();
+
+            mapperConfigExpression.CreateMap<OrderCommandItemEntity, OrderCommandItemDto>();
+            mapperConfigExpression.CreateMap<OrderCommandItemDto, OrderCommandItemEntity>();
+
+            mapperConfigExpression.CreateMap<OrderCommandPaymentEntity, OrderCommandPaymentDto>();
+            mapperConfigExpression.CreateMap<OrderCommandPaymentDto, OrderCommandPaymentEntity>();
+ 
+            mapperConfigExpression.CreateMap<RestaurantMenuEntity, RestaurantMenuDto>();
+            mapperConfigExpression.CreateMap<RestaurantMenuDto, RestaurantMenuEntity>();
+
+            mapperConfigExpression.CreateMap<RestaurantMenuItemEntity, RestaurantMenuItemDto>();
+            mapperConfigExpression.CreateMap<RestaurantMenuItemDto, RestaurantMenuItemEntity>();
         }
     }
 }
