@@ -12,9 +12,10 @@ namespace WebApi.Controllers
     public class ValuesController : ServiceController
     {
         public IMenuService MenuService { get; set; }
-        
+
+        [HttpGet]
         [ProducesResponseType(200, Type = typeof(ClientMenuViewDto))]
-        public IActionResult Get()
+        public IActionResult GetMenuView()
         {
             var clientMenuView = this.MenuService.GetMenuView();
             
