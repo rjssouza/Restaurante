@@ -162,6 +162,12 @@ namespace Module.IoC
                 .InstancePerLifetimeScope()
                 .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
 
+            this._containerBuilder.RegisterGeneric(typeof(GetSelectListQuery<,>))
+                .As(typeof(IGetSelectListQuery<,>))
+                .WithAttributeFiltering()
+                .InstancePerLifetimeScope()
+                .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
+
             this._containerBuilder.RegisterAssemblyTypes(Assembly.Load(typeof(BaseRepository).Assembly.GetName()))
                 .Where(t => t.Name.EndsWith("Repository"))
                 .OnActivating(OnActivatingInstanceForTesting)

@@ -8,6 +8,6 @@ namespace Module.Dto
     {
         public RestaurantMenuDto RestaurantMenu { get; set; }
 
-        public IEnumerable<RestaurantMenuItemDto> MenuList { get; set; }
+        public IEnumerable<GenericSelectDto<Guid>> ClientTableSelectList { get; set; }
     }
 }

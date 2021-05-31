@@ -4,5 +4,90 @@
         <name>Module.Dto</name>
     </assembly>
     <members>
+        <member name="T:Module.Dto.ClientOrder.ClientOrderDto">
+            <summary>
+            Comanda do cliente 
+            </summary>
+        </member>
+        <member name="P:Module.Dto.ClientOrder.ClientOrderDto.ClientTableId">
+            <summary>
+            Identificador da mesa do cliente que esta solicitando a comanda
+            </summary>
+        </member>
+        <member name="P:Module.Dto.ClientOrder.ClientOrderDto.Description">
+            <summary>
+            Observações sobre o pedido
+            </summary>
+        </member>
+        <member name="P:Module.Dto.ClientOrder.ClientOrderDto.ItemList">
+            <summary>
+            Lista de itens da comanda
+            </summary>
+        </member>
+        <member name="T:Module.Dto.ClientOrder.ClientOrderItemDto">
+            <summary>
+            Item da comanda do cliente
+            </summary>
+        </member>
+        <member name="P:Module.Dto.ClientOrder.ClientOrderItemDto.MenuItemId">
+            <summary>
+            Identificador item do cardapio
+            </summary>
+        </member>
+        <member name="P:Module.Dto.ClientOrder.ClientOrderItemDto.Observation">
+            <summary>
+            Observação do cliente sobre o pedido
+            </summary>
+        </member>
+        <member name="P:Module.Dto.ClientOrder.ClientOrderItemDto.Quantity">
+            <summary>
+            Quantidade, quantidade do item (default 1)
+            </summary>
+        </member>
+        <member name="T:Module.Dto.ClientOrder.ClientOrderStatusDto">
+            <summary>
+            Status da comanda do cliente
+            </summary>
+        </member>
+        <member name="P:Module.Dto.ClientOrder.ClientOrderStatusDto.Status">
+            <summary>
+            Status da comanda
+            </summary>
+        </member>
+        <member name="P:Module.Dto.ClientOrder.ClientOrderStatusDto.OrderCommandItemList">
+            <summary>
+            Itens que foram pedidos pelo cliente
+            </summary>
+        </member>
+        <member name="T:Module.Dto.OrderCommandItemDto">
+            <summary>
+            Item de comanda do cliente
+            </summary>
+        </member>
+        <member name="P:Module.Dto.OrderCommandItemDto.Delivered">
+            <summary>
+            Entregue
+            </summary>
+        </member>
+        <member name="P:Module.Dto.OrderCommandItemDto.Observation">
+            <summary>
+            Observações do cliente
+            </summary>
+        </member>
+        <member name="P:Module.Dto.OrderCommandItemDto.OrderCommandId">
+            <summary>
+            Identificador da comanda
+            </summary>
+        </member>
+        <member name="P:Module.Dto.OrderCommandItemDto.Quantity">
+            <summary>
+            Quantidade
+            </summary>
+        </member>
+        <member name="P:Module.Dto.OrderCommandItemDto.RestaurantMenuItemId">
+            <summary>
+            Item do menu do restaurante
+            </summary>
+        </member>
     </members>
 </doc>

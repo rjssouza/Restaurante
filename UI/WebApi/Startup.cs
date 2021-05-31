@@ -20,6 +20,9 @@ using WebApi.Filter;
 
 namespace WebApi
 {
+    /// <summary>
+    /// Startup WebApi ControllerLifeCycle
+    /// </summary>
     public class Startup : IControllerLifeCycle
     {
         /// <summary>

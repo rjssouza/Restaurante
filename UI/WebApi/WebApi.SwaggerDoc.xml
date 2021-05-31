@@ -4,6 +4,46 @@
         <name>WebApi</name>
     </assembly>
     <members>
+        <member name="T:WebApi.Controllers.ClientMenuController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.ClientMenuController.MenuService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.ClientMenuController.GetMenuView">
+            <summary>
+            Obtém o menu digital para a escolha do cliente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Controllers.ClientOrderController">
+            <summary>
+            Serviço para comanda de clientes
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.ClientOrderController.ClientOrderService">
+            <summary>
+            Client order service
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.ClientOrderController.CreateOrder(Module.Dto.ClientOrder.ClientOrderDto)">
+            <summary>
+            Criar a comanda para mesa do cliente
+            </summary>
+            <param name="clientOrderDto"></param>
+            <returns>Número da comanda</returns>
+        </member>
+        <member name="M:WebApi.Controllers.ClientOrderController.GetStatusOrder(System.Int32)">
+            <summary>
+            Consulta status da comanda do cliente
+            </summary>
+            <param name="orderNumber">Número da comanda</param>
+            <returns>Status da ordem do cliente</returns>
+        </member>
         <member name="T:WebApi.Filter.ExceptionFilter">
             <summary>
             Filtro de exceção
@@ -65,6 +105,11 @@
             O aspnet core utiliza de construção similar ao modelo de aplicações como console application ou windows services para que possa rodar como serviço auto gerenciado
             </summary>
             <param name="args">Argumentos externos</param>
+        </member>
+        <member name="T:WebApi.Startup">
+            <summary>
+            Startup WebApi ControllerLifeCycle
+            </summary>
         </member>
         <member name="M:WebApi.Startup.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
             <summary>

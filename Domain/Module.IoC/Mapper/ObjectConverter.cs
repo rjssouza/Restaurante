@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Module.Dto;
+using Module.Dto.ClientOrder;
 using Module.Factory.Interface.Mapper;
 using Module.IoC.Register.Interfaces;
 using Module.Repository.Entity;
@@ -67,12 +68,19 @@ namespace Module.IoC.Mapper
 
             mapperConfigExpression.CreateMap<OrderCommandPaymentEntity, OrderCommandPaymentDto>();
             mapperConfigExpression.CreateMap<OrderCommandPaymentDto, OrderCommandPaymentEntity>();
- 
+
             mapperConfigExpression.CreateMap<RestaurantMenuEntity, RestaurantMenuDto>();
             mapperConfigExpression.CreateMap<RestaurantMenuDto, RestaurantMenuEntity>();
 
             mapperConfigExpression.CreateMap<RestaurantMenuItemEntity, RestaurantMenuItemDto>();
             mapperConfigExpression.CreateMap<RestaurantMenuItemDto, RestaurantMenuItemEntity>();
+
+            mapperConfigExpression.CreateMap<ClientOrderDto, OrderCommandDto>()
+                .ForMember(src => src.Number, dest => dest.MapFrom(t => new Random(100).Next(10, 4928)))
+                .ForMember(src => src.CreatedIn, dest => dest.MapFrom(t => DateTime.Now));
+
+            mapperConfigExpression.CreateMap<ClientOrderItemDto, OrderCommandItemDto>()
+                .ForMember(src => src.RestaurantMenuItemId, dest => dest.MapFrom(t => t.MenuItemId));
         }
     }
 }

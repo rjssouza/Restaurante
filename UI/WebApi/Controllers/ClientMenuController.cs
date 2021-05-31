@@ -6,13 +6,23 @@ using Module.Service.Interface;
 
 namespace WebApi.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Route("api/values")]
     [ApiController]
     [AllowAnonymous]
-    public class ValuesController : ServiceController
+    public class ClientMenuController : ServiceController
     {
-        public IMenuService MenuService { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public IClientMenuService MenuService { get; set; }
 
+        /// <summary>
+        /// Obtém o menu digital para a escolha do cliente
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(ClientMenuViewDto))]
         public IActionResult GetMenuView()

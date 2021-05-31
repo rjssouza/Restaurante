@@ -19,6 +19,9 @@ namespace Module.Repository.Entity
         [Column("delivered")]
         public bool Delivered { get; set; }
 
+        [Column("quantity")]
+        public int Quantity { get; set; }
+
         public override string ToString()
         {
             return $"{this.Observation}, Entregue {(this.Delivered ? "Sim" : "Nao")}";
