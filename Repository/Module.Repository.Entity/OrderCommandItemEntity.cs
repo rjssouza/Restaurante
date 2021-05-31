@@ -4,7 +4,7 @@ using Module.Repository.Entity.Base;
 
 namespace Module.Repository.Entity
 {
-    [Table("order_command")]
+    [Table("order_command_item")]
     public class OrderCommandItemEntity : BaseEntity<Guid>
     {
         [Column("observation")]

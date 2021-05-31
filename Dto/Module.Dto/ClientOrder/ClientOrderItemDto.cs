@@ -6,7 +6,7 @@ namespace Module.Dto.ClientOrder
     /// <summary>
     /// Item da comanda do cliente
     /// </summary>
-    public class ClientOrderItemDto : BaseDto<int>
+    public class ClientOrderItemDto : BaseDto<Guid>
     {
         /// <summary>
         /// Construtor do item, configura valor default quantidade
