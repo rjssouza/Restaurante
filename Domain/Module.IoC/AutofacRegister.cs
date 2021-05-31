@@ -193,9 +193,9 @@ namespace Module.IoC
                 .Where(t => t.Name.EndsWith("Service"))
                 .OnActivating(OnActivatingInstanceForTesting)
                 .AsImplementedInterfaces()
-                .EnableClassInterceptors()
-                .InterceptedBy(typeof(TransactionInterceptor))
                 .InstancePerLifetimeScope()
+                .EnableInterfaceInterceptors()
+                .InterceptedBy(typeof(TransactionInterceptor))
                 .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
 
             this._containerBuilder.RegisterGeneric(typeof(EntityRepository<,>))
@@ -211,6 +211,8 @@ namespace Module.IoC
             this._containerBuilder.RegisterGeneric(typeof(EntityValidationService<,,,,>))
                 .As(typeof(IEntityService<,,,,>))
                 .InstancePerLifetimeScope()
+                .EnableInterfaceInterceptors()
+                .InterceptedBy(typeof(TransactionInterceptor))
                 .PropertiesAutowired(PropertyWiringOptions.AllowCircularDependencies);
         }
 

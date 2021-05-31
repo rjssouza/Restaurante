@@ -29,6 +29,11 @@
             Item da comanda do cliente
             </summary>
         </member>
+        <member name="M:Module.Dto.ClientOrder.ClientOrderItemDto.#ctor">
+            <summary>
+            Construtor do item, configura valor default quantidade
+            </summary>
+        </member>
         <member name="P:Module.Dto.ClientOrder.ClientOrderItemDto.MenuItemId">
             <summary>
             Identificador item do cardapio

@@ -48,7 +48,7 @@ namespace Connection
             if (this._transaction != null && this._transaction.Connection.State == ConnectionState.Open)
             {
                 this._transactionCount--;
-                if (this._transactionCount <= 1)
+                if (this._transactionCount <= 0)
                     this._transaction.Commit();
             }
         }
